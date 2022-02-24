@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit';
+}
+
+:root {
+  --white:hsl(0, 0%, 100%);
+  --light-blue:hsl(212, 45%, 89%);
+  --grayish-blue:hsl(220, 15%, 55%);
+  --dark-blue:hsl(218, 44%, 22%);
+}
+
+.App {
+  width: 100vw;
+  height:100vh;
+  margin: auto;
+  background-color:var(--light-blue);
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.cont-card {
+  width: 280px;
+  height: 450px;
+  padding:6px 12px;
+  display: grid;
+  place-items: center;
+  background:var(--white);
+  border-radius:20px ;
+}
+
+
+@media screen and (max-width : 290px ) {
+  .cont-card {
+    transform: scale(.9);
+  }
+
+}
+.qr-img-cont{
+  height: fit-content;
+  width:fit-content;
+}
+
+.qr-info-cont {
+  text-align: center;
+}
+
+
+/* qr image sizse 576x576 */
+
+.qr-img-cont > img {
+  object-fit: cover;
+  width: 100%;
+  border-radius:10px ;
+
+}
+
+.qr-info-cont > h1{
+  font-size: 1rem;
+  color: var(--dark-blue);
+  font-weight: 700;
+}
+
+.qr-info-cont > p{
+  font-size: .8rem;
+  color: var(--grayish-blue);
+  font-weight: 400;
+
+}
